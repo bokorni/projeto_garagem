@@ -11,6 +11,7 @@ from core.models import User
 from core.models import Acessorio
 from core.models import Cor
 from core.models import Modelo
+from core.models import Veiculo
 
 
 class UserAdmin(BaseUserAdmin):
@@ -59,3 +60,4 @@ admin.site.register(User, UserAdmin)
 admin.site.register(Acessorio)
 admin.site.register(Cor)
 admin.site.register(Modelo)
+admin.site.register(Veiculo)
