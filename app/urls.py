@@ -1,6 +1,5 @@
 from django.contrib import admin
 from django.urls import include, path
-from core.models.acessorio import Acessorio
 from drf_spectacular.views import (
     SpectacularAPIView,
     SpectacularRedocView,
@@ -9,13 +8,10 @@ from drf_spectacular.views import (
 from rest_framework.routers import DefaultRouter
 
 from core.views import UserViewSet
-from core.views import AcessorioViewSet
 
 router = DefaultRouter()
 
 router.register(r'usuarios', UserViewSet, basename='usuarios')
-router.register(r'acessorios', AcessorioViewSet, basename='acessorios')
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
